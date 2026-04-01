@@ -101,9 +101,9 @@ body {
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 100px; padding: 6px 18px 6px 10px;
-  font-size: 0.78rem; color: var(--kca-gold); font-weight: 500;
-  margin-bottom: 1.5rem; letter-spacing: 0.04em; text-transform: uppercase;
+  border-radius: 100px; padding: 8px 20px 8px 14px;
+  font-size: 0.82rem; color: var(--kca-gold); font-weight: 600;
+  margin-bottom: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase;
 }
 .hero-badge .dot { width: 8px; height: 8px; background: var(--kca-gold); border-radius: 50%; }
 .hero h1 {
@@ -617,15 +617,19 @@ body {
 <!-- HERO -->
 <header class="hero">
   <div class="hero-pattern"></div>
-  <div class="hero-inner">
-    <div class="hero-badge"><span class="dot"></span> Staff Resource Kit</div>
-    <h1>Kenora Indigenous <em>HART Hub</em></h1>
-    <p>Your comprehensive guide to intake, triage, referral pathways, service coordination, and culturally responsive care delivery. Everything you need in one place.</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="num">5</div><div class="label">Partner Agencies</div></div>
-      <div class="hero-stat"><div class="num">3</div><div class="label">Service Tiers</div></div>
-      <div class="hero-stat"><div class="num">7</div><div class="label">Entry Doors</div></div>
-      <div class="hero-stat"><div class="num">10+</div><div class="label">Service Pathways</div></div>
+  <div class="hero-inner" style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;">
+    <div style="flex:1;min-width:300px;">
+      <h1>Kenora Indigenous <em>HART Hub</em></h1>
+      <p>Your comprehensive guide to intake, triage, referral pathways, service coordination, and culturally responsive care delivery. Everything you need in one place.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">5</div><div class="label">Partner Agencies</div></div>
+        <div class="hero-stat"><div class="num">3</div><div class="label">Service Tiers</div></div>
+        <div class="hero-stat"><div class="num">7</div><div class="label">Entry Doors</div></div>
+        <div class="hero-stat"><div class="num">10+</div><div class="label">Service Pathways</div></div>
+      </div>
+    </div>
+    <div class="hero-badge" style="margin:0;flex-shrink:0;">
+      <span class="dot"></span> Staff Toolkit
     </div>
   </div>
 </header>
@@ -1732,9 +1736,6 @@ body {
 </footer>
 
 <script>
-// Track active contacts filter
-let activeContactFilter = 'all';
-
 // Tab switching
 function switchTab(e, tabId) {
   const container = e.target.closest('.tabs-container');
@@ -1746,8 +1747,9 @@ function switchTab(e, tabId) {
 
 // Accordion
 function toggleAcc(trigger) {
+  const body = trigger.nextElementSibling;
   trigger.classList.toggle('open');
-  trigger.nextElementSibling.classList.toggle('open');
+  body.classList.toggle('open');
 }
 
 // Lightbox
@@ -1763,16 +1765,6 @@ function closeLightbox(e) {
     document.body.style.overflow = '';
   }
 }
-// Escape key closes lightbox
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    const lb = document.getElementById('lightbox');
-    if (lb.classList.contains('show')) {
-      lb.classList.remove('show');
-      document.body.style.overflow = '';
-    }
-  }
-});
 
 // Mobile menu
 function toggleMobileMenu() {
@@ -1784,144 +1776,49 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Active nav highlighting (throttled)
+// Active nav highlighting
 const navLinks = document.querySelectorAll('.topnav-links a');
-const allSections = document.querySelectorAll('.section');
-let scrollTimeout;
-window.addEventListener('scroll', function() {
-  if (scrollTimeout) return;
-  scrollTimeout = setTimeout(function() {
-    scrollTimeout = null;
-    let current = '';
-    allSections.forEach(function(s) {
-      if (window.scrollY >= s.offsetTop - 120) current = s.id;
-    });
-    navLinks.forEach(function(a) {
-      a.classList.remove('active');
-      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-    });
-    document.getElementById('navLinks').classList.remove('show');
-  }, 100);
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+  document.getElementById('navLinks').classList.remove('show');
 });
 
-// ==================== SEARCH ====================
-// Searches ALL text content on the page. Matching elements get highlighted.
-// Sections containing matches auto-expand (tabs open, accordions open).
-// Non-matching elements are NOT hidden — only matches are highlighted.
+// Search
 function handleSearch(query) {
   const q = query.toLowerCase().trim();
-
-  // All searchable content elements
-  const searchTargets = document.querySelectorAll(
-    '.content-card, .role-card, .tier-block, .accordion, ' +
-    '.decision-item, .form-section, .rule-item, ' +
-    '.ref-table tbody tr, .contact-card, .video-card, ' +
-    '.dash-item, .tier-body, .qn-card'
-  );
-
-  // Clear all highlights and restore display
-  searchTargets.forEach(function(el) {
-    el.style.outline = '';
-    el.style.outlineOffset = '';
-    el.style.display = '';
-  });
-
-  // If search is cleared, re-apply contacts filter and stop
+  const allSearchable = document.querySelectorAll('.content-card, .role-card, .tier-block, .accordion, .decision-item, .form-section, .rule-item, .ref-table tr, .contact-card, .video-card');
   if (!q) {
-    reapplyContactsFilter();
+    allSearchable.forEach(el => { el.style.display = ''; el.style.outline = ''; });
     return;
   }
-
-  let matchCount = 0;
-  const matchedSections = new Set();
-
-  searchTargets.forEach(function(el) {
+  allSearchable.forEach(el => {
     const text = el.textContent.toLowerCase();
     if (text.includes(q)) {
-      // Highlight the match
+      el.style.display = '';
       el.style.outline = '2px solid var(--kca-gold)';
       el.style.outlineOffset = '2px';
-      matchCount++;
-
-      // Track which section this match is in
-      const section = el.closest('.section');
-      if (section) matchedSections.add(section.id);
-
-      // Auto-open the tab containing this element
-      const tabContent = el.closest('.tab-content');
-      if (tabContent && !tabContent.classList.contains('active')) {
-        const container = tabContent.closest('.tabs-container');
-        if (container) {
-          container.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-          container.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
-          tabContent.classList.add('active');
-          // Activate the matching tab button
-          const tabId = tabContent.id;
-          container.querySelectorAll('.tab-btn').forEach(function(b) {
-            if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabId)) {
-              b.classList.add('active');
-            }
-          });
-        }
-      }
-
-      // Auto-open accordion if match is inside one
-      const accBody = el.closest('.acc-body');
-      if (accBody && !accBody.classList.contains('open')) {
-        accBody.classList.add('open');
-        const trigger = accBody.previousElementSibling;
-        if (trigger && trigger.classList.contains('acc-trigger')) {
-          trigger.classList.add('open');
-        }
-      }
-
-      // Show contact cards even if filtered out
-      if (el.classList.contains('contact-card')) {
-        el.style.display = '';
-      }
-    }
-  });
-
-  // Also search table header rows (ref-table) for context
-  document.querySelectorAll('.ref-table').forEach(function(table) {
-    const tableText = table.textContent.toLowerCase();
-    if (tableText.includes(q)) {
-      table.style.outline = '2px solid var(--kca-gold)';
-      table.style.outlineOffset = '4px';
+      el.style.borderRadius = '6px';
     } else {
-      table.style.outline = '';
+      el.style.outline = '';
     }
   });
-
-  // Scroll to the first match if there is one
-  if (matchCount > 0) {
-    const firstMatch = document.querySelector('[style*="var(--kca-gold)"]');
-    if (firstMatch) {
-      firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
 }
 
-// ==================== CONTACTS FILTER ====================
+// Contacts filter
 function filterContacts(agency, btn) {
-  activeContactFilter = agency;
-  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   const cards = document.querySelectorAll('.contact-card');
-  cards.forEach(function(card) {
+  cards.forEach(card => {
     if (agency === 'all' || card.dataset.agency === agency) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
-// Re-apply the current contacts filter (used after search clear)
-function reapplyContactsFilter() {
-  const cards = document.querySelectorAll('.contact-card');
-  cards.forEach(function(card) {
-    if (activeContactFilter === 'all' || card.dataset.agency === activeContactFilter) {
       card.style.display = '';
     } else {
       card.style.display = 'none';
