@@ -271,63 +271,70 @@
       "id": "f1",
       "title": "HART Hub Consent Form",
       "description": "Client consent for services and information sharing across HART Hub partners.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/HART_Hub_Consent_Form.pdf",
       "status": "available"
     },
     {
       "id": "f2",
       "title": "Needs & First Contact Assessment",
       "description": "Structured intake covering identity, presenting reason, current situation, immediate needs, health screening, goals, and consent.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/Needs_First_Contact_Assessment.pdf",
       "status": "available"
     },
     {
       "id": "f3",
       "title": "Triage & Connection Tool",
       "description": "Step-by-step triage guide from safety screen through tier assignment and referral initiation.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/Triage_Connection_Tool.pdf",
       "status": "available"
     },
     {
       "id": "f4",
       "title": "LWDH Interagency Referral Form",
       "description": "Standard referral form for Lake of the Woods District Hospital and external partner services.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/Appendix%20H%20-%20LWDH%20ED%20Building%20Community%20Connections.pdf",
       "status": "available"
     },
     {
       "id": "f5",
       "title": "ER Demographic Form",
       "description": "Demographic data collection form used during emergency department presentations.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/Appendix%20A%20-%20ER%20Demographic%20Form%202024.pdf",
       "status": "available"
     },
     {
       "id": "f6",
       "title": "RAAM Accessing Services Procedure",
       "description": "Procedure for accessing Rapid Access Addiction Medicine clinic services and referral pathways.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/Appendix%20B%20-%20RAAM%20Accessing%20Services%20Procedure.pdf",
       "status": "available"
     },
     {
       "id": "f7",
       "title": "MSC Transfer to ER (SBAR)",
       "description": "SBAR-format transfer protocol for Morningstar Centre to Emergency Room handoffs.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/Appendix%20G%20-%20MSC%20Transfer%20to%20ER%20with%20SBAR.pdf",
       "status": "available"
     },
     {
       "id": "f8",
       "title": "KDSB Coordinated Access & Prioritization",
       "description": "Kenora District Services Board coordinated access process for supportive housing pathways.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/KDSB-Coordinated%20Access-Prioritization%20(1).pdf",
       "status": "available"
     },
     {
       "id": "f9",
       "title": "RAAM Brochure",
       "description": "Client-facing brochure explaining RAAM services, eligibility, and walk-in hours.",
-      "url": "",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/RAAM_Brochure_012026.pdf",
+      "status": "available"
+    },
+    {
+      "id": "f10",
+      "title": "Holistic Needs Assessment",
+      "description": "Comprehensive holistic needs assessment tool for client intake and service planning.",
+      "url": "https://raw.githubusercontent.com/habakaabdel/Hart-Hub-Toolkit/main/Holistic_Needs_Assessment.pdf",
       "status": "available"
     }
   ]
