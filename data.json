@@ -257,13 +257,78 @@
     "overviewDescription": "Jump to any section of the toolkit. Every resource you need for onboarding and daily practice.",
     "rolesDescription": "Funded positions across partner agencies delivering onsite and offsite HART Hub services.",
     "triageDescription": "Step-by-step process from first contact through tier assignment and referral initiation.",
-    "referralsDescription": "Sequential, not shotgun — one anchoring referral first, then build based on readiness and response.",
+    "referralsDescription": "Sequential, not shotgun \u2014 one anchoring referral first, then build based on readiness and response.",
     "servicesDescription": "What HART Hub offers in scope, what requires external referral, and your decision guide for each situation.",
-    "housingDescription": "Supportive housing is a core outcome of the HART Hub model — not an adjunct service.",
+    "housingDescription": "Supportive housing is a core outcome of the HART Hub model \u2014 not an adjunct service.",
     "caseManagementDescription": "Overview of case management and service navigation across partner agencies.",
-    "formsDescription": "Key documentation templates for client intake, consent, and information sharing.",
+    "formsDescription": "Downloadable forms, consent documents, and referral templates used across HART Hub operations.",
     "contactsDescription": "All HART Hub funded positions listed by agency. Filter by agency to find the contact you need.",
     "trainingDescription": "Video resources for onboarding, platform training, and daily practice.",
     "visualsDescription": "Click any diagram to view it in full size."
-  }
+  },
+  "forms": [
+    {
+      "id": "f1",
+      "title": "HART Hub Consent Form",
+      "description": "Client consent for services and information sharing across HART Hub partners.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f2",
+      "title": "Needs & First Contact Assessment",
+      "description": "Structured intake covering identity, presenting reason, current situation, immediate needs, health screening, goals, and consent.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f3",
+      "title": "Triage & Connection Tool",
+      "description": "Step-by-step triage guide from safety screen through tier assignment and referral initiation.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f4",
+      "title": "LWDH Interagency Referral Form",
+      "description": "Standard referral form for Lake of the Woods District Hospital and external partner services.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f5",
+      "title": "ER Demographic Form",
+      "description": "Demographic data collection form used during emergency department presentations.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f6",
+      "title": "RAAM Accessing Services Procedure",
+      "description": "Procedure for accessing Rapid Access Addiction Medicine clinic services and referral pathways.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f7",
+      "title": "MSC Transfer to ER (SBAR)",
+      "description": "SBAR-format transfer protocol for Morningstar Centre to Emergency Room handoffs.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f8",
+      "title": "KDSB Coordinated Access & Prioritization",
+      "description": "Kenora District Services Board coordinated access process for supportive housing pathways.",
+      "url": "",
+      "status": "available"
+    },
+    {
+      "id": "f9",
+      "title": "RAAM Brochure",
+      "description": "Client-facing brochure explaining RAAM services, eligibility, and walk-in hours.",
+      "url": "",
+      "status": "available"
+    }
+  ]
 }
