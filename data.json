@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T05:22:10.960Z",
+  "lastUpdated": "2026-04-01T05:23:22.893Z",
   "updatedBy": "admin",
   "news": [
     {
@@ -188,6 +188,15 @@
       "name": "Abdel Habaka",
       "phone": "(807) 464-4704",
       "email": "abdel.habaka@kenorachiefs.org"
+    },
+    {
+      "id": "c17750209335541k8a",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Project Manager",
+      "name": "Chris Hoey",
+      "phone": "(807) 407-7826",
+      "email": "chris.hoey@kenorachiefs.org"
     }
   ],
   "trainingVideos": {
