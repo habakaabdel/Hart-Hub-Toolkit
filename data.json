@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T15:04:23.667Z",
+  "lastUpdated": "2026-04-01T15:05:18.764Z",
   "updatedBy": "admin",
   "news": [
     {
@@ -16,6 +16,12 @@
     }
   ],
   "events": [
+    {
+      "id": "e1775055865598p2r2",
+      "date": "2026-04-01",
+      "title": "Steering Committee Meeting  ",
+      "body": "Meeting with leadership to discuss toolkit, soft launch, etc. "
+    },
     {
       "id": "e1",
       "date": "2026-04-02",
