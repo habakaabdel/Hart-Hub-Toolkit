@@ -19,6 +19,24 @@
   ],
   "contacts": [
     {
+      "id": "c1775020894794yhcg",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Project Manager",
+      "name": "Abdel Habaka",
+      "phone": "(807) 464-4704",
+      "email": "abdel.habaka@kenorachiefs.org"
+    },
+    {
+      "id": "c17750209335541k8a",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Project Manager",
+      "name": "Chris Hoey",
+      "phone": "(807) 407-7826",
+      "email": "chris.hoey@kenorachiefs.org"
+    },
+    {
       "id": "c1",
       "agency": "kca",
       "agencyLabel": "KCA",
@@ -179,24 +197,6 @@
       "name": "TBD",
       "phone": "(000) 000-0000",
       "email": "placeholder@kacl.ca"
-    },
-    {
-      "id": "c1775020894794yhcg",
-      "agency": "kca",
-      "agencyLabel": "KCA",
-      "position": "Project Manager",
-      "name": "Abdel Habaka",
-      "phone": "(807) 464-4704",
-      "email": "abdel.habaka@kenorachiefs.org"
-    },
-    {
-      "id": "c17750209335541k8a",
-      "agency": "kca",
-      "agencyLabel": "KCA",
-      "position": "Project Manager",
-      "name": "Chris Hoey",
-      "phone": "(807) 407-7826",
-      "email": "chris.hoey@kenorachiefs.org"
     }
   ],
   "trainingVideos": {
@@ -275,9 +275,9 @@
     "overviewDescription": "Jump to any section of the toolkit. Every resource you need for onboarding and daily practice.",
     "rolesDescription": "Funded positions across partner agencies delivering onsite and offsite HART Hub services.",
     "triageDescription": "Step-by-step process from first contact through tier assignment and referral initiation.",
-    "referralsDescription": "Sequential, not shotgun — one anchoring referral first, then build based on readiness and response.",
+    "referralsDescription": "Sequential, not shotgun \u2014 one anchoring referral first, then build based on readiness and response.",
     "servicesDescription": "What HART Hub offers in scope, what requires external referral, and your decision guide for each situation.",
-    "housingDescription": "Supportive housing is a core outcome of the HART Hub model — not an adjunct service.",
+    "housingDescription": "Supportive housing is a core outcome of the HART Hub model \u2014 not an adjunct service.",
     "caseManagementDescription": "Overview of case management and service navigation across partner agencies.",
     "formsDescription": "Downloadable forms, consent documents, and referral templates used across HART Hub operations.",
     "contactsDescription": "All HART Hub funded positions listed by agency. Filter by agency to find the contact you need.",
