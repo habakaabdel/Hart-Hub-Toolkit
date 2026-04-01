@@ -1827,5 +1827,126 @@ function filterContacts(agency, btn) {
 }
 </script>
 
+
+<script>
+// ═══ HART Hub Dynamic Content Loader ═══
+// Fetches data.json and overlays dynamic content from admin dashboard
+(function(){
+  const DATA_URL = 'data.json?' + Date.now();
+
+  function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function fmtDate(d){
+    if(!d) return '';
+    const dt=new Date(d);
+    return dt.toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'});
+  }
+  function shortMonth(d){
+    if(!d) return ['',''];
+    const dt=new Date(d);
+    return [dt.toLocaleDateString('en-CA',{month:'short'}), dt.getDate()];
+  }
+
+  function renderNews(items){
+    const boxes=document.querySelectorAll('.dash-box');
+    let newsBox=null;
+    boxes.forEach(function(b){
+      const h=b.querySelector('.dash-box-header h3');
+      if(h && h.textContent.includes('News')) newsBox=b;
+    });
+    if(!newsBox||!items||!items.length) return;
+    const body=newsBox.querySelector('.dash-box-body');
+    if(!body) return;
+    body.innerHTML=items.map(function(n){
+      return '<div class="dash-item"><div class="dash-date">'+esc(fmtDate(n.date))+'</div><div class="dash-title">'+esc(n.title)+'</div><div class="dash-desc">'+esc(n.body)+'</div></div>';
+    }).join('');
+    var badge=newsBox.querySelector('.badge');
+    if(badge) badge.textContent=items.length;
+  }
+
+  function renderEvents(items){
+    const boxes=document.querySelectorAll('.dash-box');
+    let evBox=null;
+    boxes.forEach(function(b){
+      const h=b.querySelector('.dash-box-header h3');
+      if(h && h.textContent.includes('Event')) evBox=b;
+    });
+    if(!evBox||!items||!items.length) return;
+    const body=evBox.querySelector('.dash-box-body');
+    if(!body) return;
+    body.innerHTML=items.map(function(e){
+      var dm=shortMonth(e.date);
+      return '<div class="event-item"><div class="event-date-block"><span class="month">'+esc(dm[0])+'</span><span class="day">'+dm[1]+'</span></div><div class="event-details"><div class="dash-title">'+esc(e.title)+'</div><div class="dash-desc">'+esc(e.body)+'</div></div></div>';
+    }).join('');
+    var badge=evBox.querySelector('.badge');
+    if(badge) badge.textContent=items.length;
+  }
+
+  function renderContacts(items){
+    var grid=document.getElementById('contactsGrid');
+    if(!grid||!items||!items.length) return;
+    grid.innerHTML=items.map(function(c){
+      var tagClass=(c.agency||'kca').toLowerCase();
+      return '<div class="contact-card" data-agency="'+esc(c.agency)+'"><span class="role-tag '+esc(tagClass)+'">'+esc(c.agencyLabel)+'</span><div class="contact-role">'+esc(c.position)+'</div><div class="contact-name">'+esc(c.name)+'</div><div class="contact-detail">&#128222; <a href="tel:'+esc((c.phone||'').replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></div><div class="contact-detail">&#128231; <a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></div></div>';
+    }).join('');
+  }
+
+  function renderVideos(videos){
+    if(!videos) return;
+    var buckets={careteam:'vid-careteam',toolkit:'vid-toolkit',onboarding:'vid-onboarding'};
+    Object.keys(buckets).forEach(function(key){
+      var container=document.getElementById(buckets[key]);
+      if(!container) return;
+      var vids=videos[key];
+      if(!vids||!vids.length) return;
+      var vgrid=container.querySelector('.video-grid');
+      if(!vgrid) return;
+      vgrid.innerHTML=vids.map(function(v){
+        var statusTag=v.status==='live'?'<span style="display:inline-block;padding:2px 8px;border-radius:99px;background:#2f6d44;color:white;font-size:0.7rem;font-weight:600;margin-left:0.5rem;">Live</span>':'';
+        var linkStart=v.url&&v.status==='live'?'<a href="'+esc(v.url)+'" target="_blank" style="text-decoration:none;color:inherit;">':'';
+        var linkEnd=v.url&&v.status==='live'?'</a>':'';
+        return linkStart+'<div class="video-card"><div class="video-thumb"></div><div class="video-info"><h4>'+esc(v.title)+statusTag+'</h4><p>'+esc(v.description)+'</p></div></div>'+linkEnd;
+      }).join('');
+    });
+  }
+
+  function renderSectionText(st){
+    if(!st) return;
+    var descs=document.querySelectorAll('.section-desc');
+    var map={
+      'overview':'overviewDescription','roles':'rolesDescription','triage':'triageDescription',
+      'referrals':'referralsDescription','services':'servicesDescription','housing':'housingDescription',
+      'casemanagement':'caseManagementDescription','forms':'formsDescription','contacts':'contactsDescription',
+      'training':'trainingDescription','visuals':'visualsDescription'
+    };
+    descs.forEach(function(p){
+      var section=p.closest('.section');
+      if(!section) return;
+      var id=section.id;
+      var key=map[id];
+      if(key && st[key]) p.textContent=st[key];
+    });
+    // Hero subtitle
+    if(st.heroSubtitle){
+      var hero=document.querySelector('header .hero-inner p');
+      if(hero) hero.textContent=st.heroSubtitle;
+    }
+  }
+
+  fetch(DATA_URL).then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
+  }).then(function(data){
+    if(data.news) renderNews(data.news);
+    if(data.events) renderEvents(data.events);
+    if(data.contacts) renderContacts(data.contacts);
+    if(data.trainingVideos) renderVideos(data.trainingVideos);
+    if(data.sectionText) renderSectionText(data.sectionText);
+    console.log('[HART Hub] Dynamic content loaded from data.json');
+  }).catch(function(err){
+    console.log('[HART Hub] data.json not available, using static fallback:', err.message);
+  });
+})();
+</script>
+
 </body>
 </html>
