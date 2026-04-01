@@ -1,43 +1,255 @@
 {
-  "lastUpdated": "2026-04-01T00:00:00Z",
+  "lastUpdated": "2026-04-01T03:55:32.762Z",
   "updatedBy": "admin",
-  "news": [{"id": "n1","date": "2026-03-31","title": "EMHware CMS Go-Live","body": "Centralized intake system launches across all KCA programs. Training sessions are being scheduled."}],
-  "events": [{"id": "e1","date": "2026-04-02","title": "HART Hub Team Huddle","body": "Weekly integrated care team meeting. All onsite staff expected."}],
+  "news": [
+    {
+      "id": "n1",
+      "date": "2026-03-31",
+      "title": "EMHware CMS Go-Live",
+      "body": "Centralized intake system launches across all KCA programs. Training sessions are being scheduled."
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "date": "2026-04-02",
+      "title": "HART Hub Team Huddle",
+      "body": "Weekly integrated care team meeting. All onsite staff expected."
+    }
+  ],
   "contacts": [
-    {"id":"c1","agency":"kca","agencyLabel":"KCA","position":"Team Lead — Case Management/Transitions","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c2","agency":"kca","agencyLabel":"KCA","position":"Case Manager / Transition Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c3","agency":"kca","agencyLabel":"KCA","position":"Case Manager / Transition Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c4","agency":"kca","agencyLabel":"KCA","position":"Case Manager / Transition Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c5","agency":"kca","agencyLabel":"KCA","position":"Case Manager / Transition Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c6","agency":"kca","agencyLabel":"KCA","position":"Addiction Specialist","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c7","agency":"kca","agencyLabel":"KCA","position":"Addiction Specialist","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c8","agency":"kca","agencyLabel":"KCA","position":"Makwa Patroller","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c9","agency":"kca","agencyLabel":"KCA","position":"Makwa Patroller","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kenorachiefs.org"},
-    {"id":"c10","agency":"cmha","agencyLabel":"CMHA-K","position":"Hub Operations Coordinator","name":"TBD","phone":"(000) 000-0000","email":"placeholder@cmhak.on.ca"},
-    {"id":"c11","agency":"cmha","agencyLabel":"CMHA-K","position":"Administrative Assistant","name":"TBD","phone":"(000) 000-0000","email":"placeholder@cmhak.on.ca"},
-    {"id":"c12","agency":"cmha","agencyLabel":"CMHA-K","position":"Peer Support Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@cmhak.on.ca"},
-    {"id":"c13","agency":"cmha","agencyLabel":"CMHA-K","position":"Peer Support Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@cmhak.on.ca"},
-    {"id":"c14","agency":"cmha","agencyLabel":"CMHA-K","position":"Transportation Coordinator","name":"TBD","phone":"(000) 000-0000","email":"placeholder@cmhak.on.ca"},
-    {"id":"c15","agency":"cmha","agencyLabel":"CMHA-K","position":"Crisis Stabilization Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@cmhak.on.ca"},
-    {"id":"c16","agency":"wnhac","agencyLabel":"WNHAC","position":"Primary Care RPN","name":"TBD","phone":"(000) 000-0000","email":"placeholder@wnhac.org"},
-    {"id":"c17","agency":"kacl","agencyLabel":"KACL","position":"Intensive Case Manager / Transition Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kacl.ca"},
-    {"id":"c18","agency":"kacl","agencyLabel":"KACL","position":"Intensive Case Manager / Transition Worker","name":"TBD","phone":"(000) 000-0000","email":"placeholder@kacl.ca"}
+    {
+      "id": "c1",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Manager ",
+      "name": "Joel Ames",
+      "phone": "(000) 000-0000",
+      "email": "Joel.Ames@kenorachiefs.org"
+    },
+    {
+      "id": "c2",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Case Manager ",
+      "name": "Georgy Varghese",
+      "phone": "(000) 000-0000",
+      "email": "Georgy.Varghese@kenorachiefs.org"
+    },
+    {
+      "id": "c3",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Case Manager ",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kenorachiefs.org"
+    },
+    {
+      "id": "c4",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Case Manager",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kenorachiefs.org"
+    },
+    {
+      "id": "c5",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Case Manager",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kenorachiefs.org"
+    },
+    {
+      "id": "c6",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Addiction Specialist",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kenorachiefs.org"
+    },
+    {
+      "id": "c7",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Addiction Specialist",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kenorachiefs.org"
+    },
+    {
+      "id": "c8",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Manager - Makwa Patrol",
+      "name": "C.D",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kenorachiefs.org"
+    },
+    {
+      "id": "c9",
+      "agency": "kca",
+      "agencyLabel": "KCA",
+      "position": "Makwa Patroller",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kenorachiefs.org"
+    },
+    {
+      "id": "c10",
+      "agency": "cmha",
+      "agencyLabel": "CMHA-K",
+      "position": "Hub Operations Coordinator",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@cmhak.on.ca"
+    },
+    {
+      "id": "c11",
+      "agency": "cmha",
+      "agencyLabel": "CMHA-K",
+      "position": "Administrative Assistant",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@cmhak.on.ca"
+    },
+    {
+      "id": "c12",
+      "agency": "cmha",
+      "agencyLabel": "CMHA-K",
+      "position": "Peer Support Worker",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@cmhak.on.ca"
+    },
+    {
+      "id": "c13",
+      "agency": "cmha",
+      "agencyLabel": "CMHA-K",
+      "position": "Peer Support Worker",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@cmhak.on.ca"
+    },
+    {
+      "id": "c14",
+      "agency": "cmha",
+      "agencyLabel": "CMHA-K",
+      "position": "Transportation Coordinator",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@cmhak.on.ca"
+    },
+    {
+      "id": "c15",
+      "agency": "cmha",
+      "agencyLabel": "CMHA-K",
+      "position": "Crisis Stabilization Worker",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@cmhak.on.ca"
+    },
+    {
+      "id": "c16",
+      "agency": "wnhac",
+      "agencyLabel": "WNHAC",
+      "position": "Primary Care RPN",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@wnhac.org"
+    },
+    {
+      "id": "c17",
+      "agency": "kacl",
+      "agencyLabel": "KACL",
+      "position": "Intensive Case Manager / Transition Worker",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kacl.ca"
+    },
+    {
+      "id": "c18",
+      "agency": "kacl",
+      "agencyLabel": "KACL",
+      "position": "Intensive Case Manager / Transition Worker",
+      "name": "TBD",
+      "phone": "(000) 000-0000",
+      "email": "placeholder@kacl.ca"
+    }
   ],
   "trainingVideos": {
     "careteam": [
-      {"id":"v1","title":"CareTeam: Getting Started","description":"Account setup, navigation, and dashboard overview.","url":"","status":"coming_soon"},
-      {"id":"v2","title":"CareTeam: Creating a Referral","description":"Step-by-step guide to submitting internal and partner referrals.","url":"","status":"coming_soon"},
-      {"id":"v3","title":"CareTeam: Client Profile Management","description":"Adding client details, updating status, and documentation.","url":"","status":"coming_soon"}
+      {
+        "id": "v1",
+        "title": "CareTeam: Getting Started",
+        "description": "Account setup, navigation, and dashboard overview.",
+        "url": "",
+        "status": "coming_soon"
+      },
+      {
+        "id": "v2",
+        "title": "CareTeam: Creating a Referral",
+        "description": "Step-by-step guide to submitting internal and partner referrals.",
+        "url": "",
+        "status": "coming_soon"
+      },
+      {
+        "id": "v3",
+        "title": "CareTeam: Client Profile Management",
+        "description": "Adding client details, updating status, and documentation.",
+        "url": "",
+        "status": "coming_soon"
+      }
     ],
     "toolkit": [
-      {"id":"v4","title":"Toolkit Overview","description":"Navigating the staff toolkit, search, and quick access features.","url":"","status":"coming_soon"},
-      {"id":"v5","title":"Triage & Tier Assignment","description":"How to use the triage steps, safety screen, and assign service tiers.","url":"","status":"coming_soon"},
-      {"id":"v6","title":"Referral Matrix Walkthrough","description":"Priority rules, routing, and how to sequence referrals correctly.","url":"","status":"coming_soon"}
+      {
+        "id": "v4",
+        "title": "Toolkit Overview",
+        "description": "Navigating the staff toolkit, search, and quick access features.",
+        "url": "",
+        "status": "coming_soon"
+      },
+      {
+        "id": "v5",
+        "title": "Triage & Tier Assignment",
+        "description": "How to use the triage steps, safety screen, and assign service tiers.",
+        "url": "",
+        "status": "coming_soon"
+      },
+      {
+        "id": "v6",
+        "title": "Referral Matrix Walkthrough",
+        "description": "Priority rules, routing, and how to sequence referrals correctly.",
+        "url": "",
+        "status": "coming_soon"
+      }
     ],
     "onboarding": [
-      {"id":"v7","title":"Welcome to the HART Hub","description":"Introduction to the HART Hub model, partner agencies, and your role.","url":"","status":"coming_soon"},
-      {"id":"v8","title":"Cultural Safety & Two-Eyed Seeing","description":"Foundations of culturally responsive practice in the Kenora context.","url":"","status":"coming_soon"},
-      {"id":"v9","title":"Day-to-Day Operations","description":"Shift expectations, huddle structure, documentation, and escalation protocols.","url":"","status":"coming_soon"}
+      {
+        "id": "v7",
+        "title": "Welcome to the HART Hub",
+        "description": "Introduction to the HART Hub model, partner agencies, and your role.",
+        "url": "",
+        "status": "coming_soon"
+      },
+      {
+        "id": "v8",
+        "title": "Cultural Safety & Two-Eyed Seeing",
+        "description": "Foundations of culturally responsive practice in the Kenora context.",
+        "url": "",
+        "status": "coming_soon"
+      },
+      {
+        "id": "v9",
+        "title": "Day-to-Day Operations",
+        "description": "Shift expectations, huddle structure, documentation, and escalation protocols.",
+        "url": "",
+        "status": "coming_soon"
+      }
     ]
   },
   "sectionText": {
