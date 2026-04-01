@@ -648,6 +648,7 @@ body {
       <a href="#contacts">Contacts</a>
       <a href="#training">Training</a>
       <a href="#visuals">Visuals</a>
+      <a href="#faq">FAQ</a>
     </div>
     <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -704,7 +705,7 @@ body {
     <a href="#referrals" class="qn-card">
       <div class="qn-icon sage">&#128260;</div>
       <h3>Referral Matrix</h3>
-      <p>Priority rules, sequencing, access site routing, and partner pathways.</p>
+      <p>Priority rules, sequencing, referral matrix, and partner pathways.</p>
     </a>
     <a href="#services" class="qn-card">
       <div class="qn-icon deep">&#127973;</div>
@@ -1075,7 +1076,6 @@ body {
     <div class="tabs-header">
       <button class="tab-btn active" onclick="switchTab(event, 'ref-rules')">Priority Rules</button>
       <button class="tab-btn" onclick="switchTab(event, 'ref-matrix')">Referral Matrix</button>
-      <button class="tab-btn" onclick="switchTab(event, 'ref-routing')">Access Site Routing</button>
       <button class="tab-btn" onclick="switchTab(event, 'ref-flow')">Sequencing Flow</button>
     </div>
 
@@ -1107,25 +1107,6 @@ body {
       </div>
     </div>
 
-    <div class="tab-content" id="ref-routing">
-      <div class="ref-table-wrap">
-        <table class="ref-table">
-          <thead>
-            <tr><th>Entry Door</th><th>Screen Using</th><th>Routes To</th><th>First Action</th><th>Key Consideration</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Self-Referral / Walk-in</strong></td><td>Needs Assessment + Safety</td><td>HART Hub Coordinator &rarr; Triage</td><td>Consent + Needs Assessment</td><td>Don&rsquo;t force triage unless client engages</td></tr>
-            <tr><td><strong>Shelter Staff (KES/CMHA-K)</strong></td><td>Overnight observation + flag</td><td>CSH / ICT at next huddle</td><td>Internal flag &rarr; Coordinator follow-up</td><td>Shelter staff flag; Coordinator assesses</td></tr>
-            <tr><td><strong>LWDH Emergency Dept.</strong></td><td>ED Demographic Form + SBAR</td><td>Discharge referral &rarr; Coordinator</td><td>Confirm discharge plan &rarr; warm handoff</td><td>Follow up within 48 hrs. Use ED form data.</td></tr>
-            <tr><td><strong>Morningstar Centre</strong></td><td>SBAR + Discharge plan</td><td>Coordinator or RAAM</td><td>Transition planning pre-discharge</td><td>Begin engagement before discharge. Avoid gaps.</td></tr>
-            <tr><td><strong>Partner Agency</strong></td><td>Interagency Referral Form</td><td>Coordinator &rarr; Triage</td><td>Review form &rarr; contact client</td><td>Accept referring agency&rsquo;s assessment</td></tr>
-            <tr><td><strong>Clinical Service Hub</strong></td><td>Clinical intake assessment</td><td>ICT &rarr; Tiered assignment</td><td>Assign tier + lead worker</td><td>Already screened. Move to tier assignment.</td></tr>
-            <tr><td><strong>WIN Shelter / FN Community</strong></td><td>Community worker flag + consent</td><td>Coordinator (Two-Eyed Seeing)</td><td>Cultural preference check</td><td>Prioritize KCA/WNHAC/Migisi if preferred</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
     <div class="tab-content" id="ref-flow">
       <div class="content-card">
         <h4>Referral Sequencing Flow</h4>
@@ -1145,7 +1126,12 @@ body {
       </div>
       <div class="content-card gold" style="margin-top:0.5rem;">
         <h4>Routine Coordination Cadence</h4>
-        <p>Daily Huddle &rarr; Weekly Integrated Care Team &rarr; Monthly Partner Check-In &rarr; Quarterly KPI Review &rarr; Quarterly Steering Committee</p>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="margin-bottom:0.5rem;"><strong style="color:var(--kca-teal);">Daily</strong> &mdash; Team Huddle &amp; Care Team Coordination</li>
+          <li style="margin-bottom:0.5rem;"><strong style="color:var(--kca-teal);">Ongoing</strong> &mdash; Partner Check-Ins (through Working Groups)</li>
+          <li style="margin-bottom:0.5rem;"><strong style="color:var(--kca-teal);">Quarterly</strong> &mdash; KPI Reviews</li>
+          <li><strong style="color:var(--kca-teal);">Quarterly</strong> &mdash; Steering Committee Reviews</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -1325,7 +1311,7 @@ body {
 
     <div class="tab-content active" id="cm-cmhak">
       <div class="content-card">
-        <h4>Service Navigation</h4>
+        <h4><a href="https://www.cmhak.on.ca/index.php/services" target="_blank" style="color:var(--kca-deep);text-decoration:none;">Service Navigation</a></h4>
         <ul>
           <li>Service Navigator offered through the Clinical Service Hub</li>
           <li>SOLGEN partnership: part-time navigator for individuals on community supervision orders (contract ends March 31, 2026)</li>
@@ -1334,22 +1320,22 @@ body {
       <div class="content-card sage">
         <h4>Case Management Programs</h4>
         <ul>
-          <li><strong>Assertive Community Treatment (ACT):</strong> For eligible individuals with specific criteria</li>
-          <li><strong>Forensic Case Manager:</strong> For individuals in Kenora with active criminal charges not attached to a current provider</li>
-          <li><strong>Mobile MH&amp;A Clinic Case Manager:</strong> Serves 5 remote communities as part of multi-disciplinary team. Landing site at Main Office.</li>
-          <li><strong>Housing Case Manager:</strong> Supports residents in Kenora Supportive Housing (2 days/week) and Safe Bed Program (3 days/week). Works with existing community case managers.</li>
-          <li><strong>Diversion Worker:</strong> At Clinical Service Hub, serves clients flagged as chronically homeless (14+ days in shelter/month). Assists with housing applications and 3-month transition support.</li>
+          <li><strong><a href="https://www.cmhak.on.ca/index.php/assertive-community-treatment-information" target="_blank" style="color:var(--kca-teal);">Assertive Community Treatment (ACT)</a>:</strong> For eligible individuals with specific criteria</li>
+          <li><strong><a href="https://www.cmhak.on.ca/index.php/forensic-case-management" target="_blank" style="color:var(--kca-teal);">Forensic Case Manager</a>:</strong> For individuals in Kenora with active criminal charges not attached to a current provider</li>
+          <li><strong>Mobile MH&amp;A Clinic Case Manager:</strong> Serves 5 remote communities as part of multi-disciplinary team</li>
+          <li><strong><a href="https://www.cmhak.on.ca/index.php/kenora-supportive-housing" target="_blank" style="color:var(--kca-teal);">Housing Case Manager</a>:</strong> Supports residents in Kenora Supportive Housing and Safe Bed Program</li>
+          <li><strong>Diversion Worker:</strong> At Clinical Service Hub, serves clients flagged as chronically homeless (14+ days in shelter/month)</li>
         </ul>
       </div>
     </div>
 
     <div class="tab-content" id="cm-kacl">
       <div class="content-card">
-        <h4>Intensive Case Management</h4>
-        <p>Support for adults 18+ who identify with a serious mental illness. Direct referrals to the program. Participation is voluntary.</p>
+        <h4><a href="https://www.kacl.ca/community-mental-health-support-services/" target="_blank" style="color:var(--kca-deep);text-decoration:none;">Intensive Case Management</a></h4>
+        <p>Support for adults 18+ who identify with a serious mental illness. Direct referrals to the program. Participation is voluntary. <a href="https://www.kacl.ca/community-mental-health-support-services/" target="_blank" style="color:var(--kca-teal);font-size:0.8rem;">Visit KACL CMHSS &rarr;</a></p>
       </div>
       <div class="content-card gold">
-        <h4>Adult Protective Services</h4>
+        <h4><a href="https://www.kacl.ca/adult-protective-services/" target="_blank" style="color:var(--kca-deep);text-decoration:none;">Adult Protective Services</a></h4>
         <p>Supports for adults 18+ with a diagnosed developmental disability. Accessed through Developmental Services Ontario (DSO) and deemed eligible through DSO.</p>
       </div>
       <div class="content-card sage">
@@ -1704,6 +1690,7 @@ body {
       <a href="#triage">Triage</a>
       <a href="#referrals">Referrals</a>
       <a href="#visuals">Visuals</a>
+      <a href="#faq">FAQ</a>
     </div>
   </div>
 </footer>
@@ -1903,7 +1890,7 @@ function filterContacts(agency, btn) {
       'overview':'overviewDescription','roles':'rolesDescription','triage':'triageDescription',
       'referrals':'referralsDescription','services':'servicesDescription','housing':'housingDescription',
       'casemanagement':'caseManagementDescription','forms':'formsDescription','contacts':'contactsDescription',
-      'training':'trainingDescription','visuals':'visualsDescription'
+      'training':'trainingDescription','visuals':'visualsDescription','faq':'faqDescription'
     };
     descs.forEach(function(p){
       var section=p.closest('.section');
@@ -1938,3 +1925,67 @@ function filterContacts(agency, btn) {
 
 </body>
 </html>
+
+<div class="divider"></div>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section" id="faq">
+  <div class="section-header">
+    <div class="section-label">Information</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-desc">Common questions about the HART Hub model, services, eligibility, and operations.</p>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">What is the Kenora HART Hub? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p>Rooted in an Anishinaabe worldview, the Hub expands upon the existing Kenora Emergency Shelter &amp; Clinical Services Hub, enhancing its capacity to offer a seamless continuum of care that integrates cultural practices and traditional healing methods. This model emphasizes cultural safety, ensuring that services are delivered in ways that respect and incorporate Indigenous knowledge, practices, and community values.</p>
+      <p>The Hub leverages existing local resources and partnerships to ensure service efficiency and avoid duplication while introducing new services to fill identified gaps, such as culturally appropriate transitional housing and wraparound care initiatives. An integral component of the project is to engage Indigenous communities and individuals with lived experience in the planning, governance, and delivery of services.</p>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">Who are the funded Partners? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <ul>
+        <li>Kenora District Services Board (KDSB)</li>
+        <li>Canadian Mental Health Association Kenora (CMHA-K)</li>
+        <li>Kenora Association for Community Living (KACL)</li>
+        <li>Waasegiizhig Nanaandawe&rsquo;iyewigamig (WNHAC)</li>
+        <li>Ogimaawabiitong &ldquo;Kenora Chiefs Advisory&rdquo; (KCA)</li>
+      </ul>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">Where will the HART Hub be located? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p>The main HART Hub space is collocated at the Kenora Emergency Shelter with the existing Clinical Services Hub operated by CMHA-K. This has been identified as a safe, low-barrier facility that can incorporate the expansion of services such as primary care, case management, addictions counselling, navigation assistance, and transportation assistance.</p>
+      <p>This is an expansion and enhancement of the Mental Health and Wellbeing related services already active in the space.</p>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">Who is eligible for services? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p>Young adults 18+ who are experiencing chronic homelessness, and/or have complex substance use, mental health, and/or experience barriers to receiving care and support.</p>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">What area does the HART Hub service? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p>The Kenora HART Hub provides services to individuals in the Community of Kenora, including First Nations in the surrounding region (e.g., Wabaseemoong Independent Nation).</p>
+      <p>The HART Hub is not a landing area for outside communities to send individuals for treatment &mdash; it is not a rehabilitation facility. It is intended to provide coordinated, low-barrier access to multiple existing service pathways as well as enhancements for individuals seeking access.</p>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">Why was the Emergency Shelter chosen? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p>The Kenora Emergency Shelter has established protocols ensuring a safe and low-barrier environment for both staff and patrons &mdash; we can meet individuals where they feel safe.</p>
+      <p>The existing Clinical Services Hub is well established, and enhancing and collaborating with that service allows the HART Hub to close any gaps in service.</p>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">What services are in scope and out of scope? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p><strong>In scope:</strong> Case management, addictions counselling, primary care, peer support, housing navigation, crisis stabilization, transportation, basic needs, and supportive housing.</p>
+      <p><strong>Out of scope:</strong> Supervised consumption services, safe supply programs, and needle exchange services. Kenora has services available like RAAM that can be connected with HART Hub clients outside of the HART Hub as needs are assessed.</p>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">How does someone connect with the HART Hub? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p><strong>As an individual seeking services:</strong> The HART Hub is designed to be low barrier, meaning individuals can self-refer and walk into the HART Hub during its hours of operation: 8:00am &ndash; 11:30pm.</p>
+      <p><strong>From a referral source:</strong> Referral pathways are being developed as we network locally to ensure low-barrier service navigation for service providers.</p>
+    </div></div>
+
+    <div class="accordion"><button class="acc-trigger" onclick="toggleAcc(this)">How is the Wabaseemoong (WIN) shelter connected? <span class="chevron">&#9660;</span></button><div class="acc-body">
+      <p>As an Indigenous-led HART Hub, it was important to partner with communities to offer a true continuum of care. The WIN shelter is open 365 days a year from 4:00pm &ndash; 8:00am. Its connection with the HART Hub provides resources such as shelter updates, security, and staffing to ensure continuing quality of care.</p>
+      <p>It also provides a connection to the services and programs that are part of or connect with the Kenora HART Hub. Patrons of both shelters may transition between communities, and this connection prevents any disruption in care.</p>
+    </div></div>
+
+  </div>
+</section>
