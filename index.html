@@ -418,6 +418,46 @@ body {
   width: 16px; height: 16px; border: 2px solid var(--kca-border);
   border-radius: 3px; flex-shrink: 0;
 }
+/* ==================== RESOURCE DOWNLOADS ==================== */
+.resource-grid {
+  display: grid; grid-template-columns: 1fr; gap: 0.75rem;
+}
+@media (min-width: 700px) {
+  .resource-grid { grid-template-columns: 1fr 1fr; }
+}
+.resource-card {
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: var(--kca-cream); border-radius: var(--radius);
+  padding: 1.25rem; border: 1px solid var(--kca-border);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.resource-card:hover {
+  border-color: var(--kca-teal); box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.resource-icon {
+  flex-shrink: 0; width: 40px; height: 40px; border-radius: 8px;
+  background: var(--kca-teal); display: flex; align-items: center;
+  justify-content: center;
+}
+.resource-icon svg { width: 20px; height: 20px; fill: #fff; }
+.resource-info { flex: 1; min-width: 0; }
+.resource-info h4 {
+  font-size: 0.88rem; font-weight: 700; color: var(--kca-deep);
+  margin-bottom: 0.3rem; line-height: 1.3;
+}
+.resource-info p {
+  font-size: 0.8rem; color: var(--kca-text); line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.resource-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.78rem; font-weight: 600; color: var(--kca-teal);
+  text-decoration: none;
+}
+.resource-link:hover { text-decoration: underline; }
+.resource-link.disabled {
+  color: var(--kca-border); pointer-events: none; cursor: default;
+}
 
 /* ==================== SEARCH ==================== */
 .search-bar { position: relative; margin-bottom: 2rem; }
@@ -1338,82 +1378,14 @@ body {
   <div class="section-header">
     <div class="section-label">Documentation</div>
     <h2 class="section-title">Forms &amp; Consent</h2>
-    <p class="section-desc">Key documentation templates for client intake, consent, and information sharing.</p>
+    <p class="section-desc">Downloadable forms, consent documents, and referral templates used across HART Hub operations.</p>
   </div>
 
-  <div class="tabs-container">
-    <div class="tabs-header">
-      <button class="tab-btn active" onclick="switchTab(event, 'forms-consent')">Consent Form</button>
-      <button class="tab-btn" onclick="switchTab(event, 'forms-info')">Information Sharing</button>
-    </div>
-
-    <div class="tab-content active" id="forms-consent">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:1.25rem;color:var(--kca-deep);">HART Hub Consent for Services + Information Sharing</h3>
-
-      <div class="form-section">
-        <h4>Client Info</h4>
-        <p>Legal name, preferred name, DOB, phone (can we leave a message?), preferred contact method (call / text / email / other).</p>
-      </div>
-
-      <div class="form-section">
-        <h4>What I Am Consenting To</h4>
-        <p>HART Hub services and supports which may include: case management/transition support, addictions supports, primary care, peer support, housing navigation, crisis stabilization, transportation support, and basic needs support.</p>
-      </div>
-
-      <div class="form-section">
-        <h4>Information Sharing</h4>
-        <p>Consent to share relevant information with HART Hub funded partners (for coordination) and non-funded partners (only when needed for referral). Information limited to what is needed to connect to services, coordinate care, and reduce repeating story.</p>
-      </div>
-
-      <div class="form-section">
-        <h4>Client Choices</h4>
-        <ul style="list-style:none;padding:0;">
-          <li class="form-check"><span class="box"></span> Can use overnight shelter without HART Hub services</li>
-          <li class="form-check"><span class="box"></span> Can refuse any service or referral</li>
-          <li class="form-check"><span class="box"></span> Can withdraw consent at any time (verbally or in writing)</li>
-        </ul>
-      </div>
-
-      <div class="form-section" style="background:rgba(210,38,48,0.05);">
-        <h4>Limits</h4>
-        <p>Staff may need to share information without consent if there is a serious safety concern or a legal requirement.</p>
-      </div>
-
-      <div class="form-section">
-        <h4>What Can Be Shared (check all that apply)</h4>
-        <ul style="list-style:none;padding:0;">
-          <li class="form-check"><span class="box"></span> Contact info</li>
-          <li class="form-check"><span class="box"></span> Housing situation</li>
-          <li class="form-check"><span class="box"></span> Health / mental health needs (general)</li>
-          <li class="form-check"><span class="box"></span> Substance use needs (general)</li>
-          <li class="form-check"><span class="box"></span> Service history and current supports</li>
-          <li class="form-check"><span class="box"></span> Safety concerns relevant to service planning</li>
-          <li class="form-check"><span class="box"></span> Cultural/community supports wanted</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="tab-content" id="forms-info">
-      <div class="content-card">
-        <h4>Care Team Platform</h4>
-        <p>HART Hub-funded staff may document service information in <strong>Care Team</strong> for internal coordination. This is separate from external referral documentation.</p>
-      </div>
-      <div class="content-card gold">
-        <h4>Referral Methods</h4>
-        <ul>
-          <li><strong>Internal (Care Team):</strong> Multiple onsite referrals encouraged</li>
-          <li><strong>Warm Handoff:</strong> For urgent crisis or stabilization referrals</li>
-          <li><strong>Interagency Referral Form:</strong> For RAAM, LWDH, and external partners</li>
-          <li><strong>SBAR:</strong> Used for transfers from Morningstar or ER</li>
-          <li><strong>KDSB Coordinated Access:</strong> For supportive housing pathways</li>
-        </ul>
-      </div>
-      <div class="content-card sage">
-        <h4>48-Hour Referral Outcome Loop</h4>
-        <p>Outcome reported back to referring agency within 48 hours: <strong>Accepted</strong> / <strong>Pending</strong> / <strong>Declined by Client</strong> / <strong>Redirected by Service</strong>.</p>
-      </div>
-    </div>
+  <div class="resource-grid" id="formsGrid">
+    <!-- Dynamically populated from data.json -->
   </div>
+</section>
+
 </section>
 
 <div class="divider"></div>
@@ -1909,6 +1881,20 @@ function filterContacts(agency, btn) {
     });
   }
 
+
+  function renderForms(items){
+    var grid=document.getElementById('formsGrid');
+    if(!grid||!items||!items.length) return;
+    var svgIcon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>';
+    grid.innerHTML=items.map(function(f){
+      var hasUrl=f.url&&f.url.length>0&&f.status!=='coming_soon';
+      var linkHtml=hasUrl
+        ? '<a href="'+esc(f.url)+'" target="_blank" class="resource-link" download>&#8595; Download PDF</a>'
+        : '<span class="resource-link disabled">Coming soon</span>';
+      return '<div class="resource-card"><div class="resource-icon">'+svgIcon+'</div><div class="resource-info"><h4>'+esc(f.title)+'</h4><p>'+esc(f.description)+'</p>'+linkHtml+'</div></div>';
+    }).join('');
+  }
+
   function renderSectionText(st){
     if(!st) return;
     var descs=document.querySelectorAll('.section-desc');
@@ -1940,6 +1926,7 @@ function filterContacts(agency, btn) {
     if(data.events) renderEvents(data.events);
     if(data.contacts) renderContacts(data.contacts);
     if(data.trainingVideos) renderVideos(data.trainingVideos);
+    if(data.forms) renderForms(data.forms);
     if(data.sectionText) renderSectionText(data.sectionText);
     console.log('[HART Hub] Dynamic content loaded from data.json');
   }).catch(function(err){
